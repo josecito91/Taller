@@ -30,7 +30,7 @@ public class Paises extends javax.swing.JInternalFrame implements ActionListener
      */
     public Paises() {
         initComponents();
-        setSize(609, 478);
+        setSize(435, 445);
         setTitle("Paises");
         setClosable(true);
         setIconifiable(true);
@@ -137,79 +137,76 @@ public class Paises extends javax.swing.JInternalFrame implements ActionListener
         txtdescripcion.setEnabled(false);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 50, 560, 120);
+        jPanel1.setBounds(10, 45, 400, 140);
 
-        etipaises.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        etipaises.setFont(new java.awt.Font("Arial", 1, 24));
+        etipaises.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         etipaises.setText("Paises");
         getContentPane().add(etipaises);
-        etipaises.setBounds(240, 20, 90, 30);
+        etipaises.setBounds(10, 10, 400, 29);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(null);
 
-        panelpaises.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Codigo", "Descripcion"
-            }
-        ));
-        jScrollPane1.setViewportView(panelpaises);
-
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 540, 110);
+        jScrollPane1.setBounds(10, 10, 380, 120);
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(10, 200, 560, 130);
+        jPanel2.setBounds(10, 190, 400, 140);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         jPanel3.setLayout(null);
 
         btnnuevo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnnuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Borrar.png")));
+        btnnuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Agregar.png")));
         jPanel3.add(btnnuevo);
-        btnnuevo.setBounds(10, 20, 80, 23);
+        btnnuevo.setBounds(10, 10,  40, 40);
         btnnuevo.addActionListener(this);
+        btnnuevo.setToolTipText("Agregar Registro");
 
         btnguardar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Borrar.png")));
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Guardar.png")));
         jPanel3.add(btnguardar);
-        btnguardar.setBounds(100, 20, 80, 23);
+        btnguardar.setBounds(70, 10, 40, 40);
         btnguardar.addActionListener(this);
         btnguardar.setEnabled(false);
+        btnguardar.setToolTipText("Guardar Datos");
         
 
         btnmodificar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnmodificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Borrar.png")));
+        btnmodificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Modificar.png")));
         jPanel3.add(btnmodificar);
-        btnmodificar.setBounds(190, 20, 90, 23);
+        btnmodificar.setBounds(130, 10, 40, 40);
         btnmodificar.addActionListener(this);
         btnmodificar.setEnabled(false);
+        btnmodificar.setToolTipText("Modificar Registro");
 
         btneliminar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Borrar.png")));
         jPanel3.add(btneliminar);
-        btneliminar.setBounds(290, 20, 80, 23);
+        btneliminar.setBounds(190, 10, 40, 40);
         btneliminar.addActionListener(this);
         btneliminar.setEnabled(false);
+        btneliminar.setToolTipText("Eliminar Registro");
 
         btncancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btncancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Borrar.png")));
+        btncancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Cancelar.png")));
         jPanel3.add(btncancelar);
-        btncancelar.setBounds(380, 20, 90, 23);
+        btncancelar.setBounds(270, 10, 40, 40);
         btncancelar.addActionListener(this);
+        btncancelar.setToolTipText("Cancelar Operacion");
         
 
         btnvista.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnvista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Borrar.png")));
+        btnvista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Vista.png")));
         jPanel3.add(btnvista);
-        btnvista.setBounds(480, 20, 80, 23);
+        btnvista.setBounds(340, 10, 40, 40);
         btnvista.addActionListener(this);
         btnvista.setEnabled(false);
+        btnvista.setToolTipText("Crear Reporte");
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(10, 340, 560, 70);
+        jPanel3.setBounds(10, 340, 400, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
