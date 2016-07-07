@@ -2,7 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista_Referencial;
+package Refereciales;
+
+import java.awt.image.ImagingOpException;
+
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -15,7 +19,7 @@ public class Formas_de_Pago extends javax.swing.JInternalFrame {
      */
     public Formas_de_Pago() {
         initComponents();
-        setSize(601, 420);
+        setSize(617, 473);
         setTitle("Formas de Pago");
         setClosable(true);
         setIconifiable(true);
@@ -57,14 +61,14 @@ public class Formas_de_Pago extends javax.swing.JInternalFrame {
         eticodigo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         eticodigo.setText("Codigo:");
         jPanel1.add(eticodigo);
-        eticodigo.setBounds(23, 13, 50, 15);
+        eticodigo.setBounds(40, 20, 50, 15);
 
         etidescripcion.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         etidescripcion.setText("Descripcion:");
         jPanel1.add(etidescripcion);
         etidescripcion.setBounds(20, 50, 80, 15);
         jPanel1.add(txtcodigo);
-        txtcodigo.setBounds(70, 10, 80, 20);
+        txtcodigo.setBounds(100, 20, 80, 20);
         jPanel1.add(txtdescripcion);
         txtdescripcion.setBounds(100, 50, 120, 20);
 
@@ -87,6 +91,11 @@ public class Formas_de_Pago extends javax.swing.JInternalFrame {
                 "Codigo", "Descripcion"
             }
         ));
+        panelformasdepago.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                panelformasdepagoKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(panelformasdepago);
 
         jPanel2.add(jScrollPane1);
@@ -99,32 +108,38 @@ public class Formas_de_Pago extends javax.swing.JInternalFrame {
         jPanel3.setLayout(null);
 
         btnnuevo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnnuevo.setText("Nuevo");
+        btnnuevo.setToolTipText("Agregar Registro");
+        btnmodificar.setIcon(new ImageIcon(getClass().getResource("/imag/Nuevo.png")));
         jPanel3.add(btnnuevo);
         btnnuevo.setBounds(10, 10, 70, 23);
 
         btnguardar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnguardar.setText("Guardar");
+        btnguardar.setToolTipText("Guardar Datos");
+        btnmodificar.setIcon(new ImageIcon(getClass().getResource("/imag/Save.png")));
         jPanel3.add(btnguardar);
         btnguardar.setBounds(90, 10, 79, 23);
 
         btnmodificar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnmodificar.setText("Modificar");
+        btnmodificar.setToolTipText("Modificar Registro");
+        btnmodificar.setIcon(new ImageIcon(getClass().getResource("/imag/Update.png")));
         jPanel3.add(btnmodificar);
         btnmodificar.setBounds(180, 10, 90, 23);
 
         btneliminar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btneliminar.setText("Eliminar");
+        btneliminar.setToolTipText("Eliminar Registro");
+        btnmodificar.setIcon(new ImageIcon(getClass().getResource("/imag/Delete.png")));
         jPanel3.add(btneliminar);
         btneliminar.setBounds(280, 10, 80, 23);
 
         btncancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btncancelar.setText("Cancelar");
+        btncancelar.setToolTipText("Cancelar Operacion");
+        btnmodificar.setIcon(new ImageIcon(getClass().getResource("/imag/Cancel.png")));
         jPanel3.add(btncancelar);
         btncancelar.setBounds(370, 10, 90, 23);
 
         btnvista.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnvista.setText("Vista");
+        btnvista.setToolTipText("Crear Reportes");
+        btnmodificar.setIcon(new ImageIcon(getClass().getResource("/imag/Vista.png")));
         jPanel3.add(btnvista);
         btnvista.setBounds(470, 10, 70, 23);
 
@@ -133,6 +148,11 @@ public class Formas_de_Pago extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void panelformasdepagoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_panelformasdepagoKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelformasdepagoKeyPressed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btncancelar;
     private javax.swing.JButton btneliminar;

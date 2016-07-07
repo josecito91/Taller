@@ -7,12 +7,16 @@ package vista_Referencial;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JInternalFrame;
 import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
 
 import Clase_Imagen_Fondo.ImagenFondo;
+import Refereciales.Formas_de_Pago;
 import vista_Informes.Consulta_Agenda;
 import vista_Informes.Consulta_Cliente;
 import vista_Informes.Consulta_Empleado;
@@ -142,6 +146,10 @@ public class menu extends javax.swing.JFrame implements ActionListener{
 
         ItemEmpleado.setText("Empleado");
         Administrador.add(ItemEmpleado);
+        
+       //linea de codigo para acceso rapido desde el menu principal
+        Itemempleado.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,InputEvent.ALT_MASK));
+        ItemEmpleado.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,InputEvent.ALT_MASK));
         ItemEmpleado.addActionListener(this);
 
         ItemCargo.setText("Cargo");
